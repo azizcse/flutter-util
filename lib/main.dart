@@ -4,6 +4,7 @@ import 'package:execciseflutter/language/Messages.dart';
 import 'package:execciseflutter/ui/BlurryContainerView.dart';
 import 'package:execciseflutter/ui/CacheNetworkImageView.dart';
 import 'package:execciseflutter/ui/EasyContainerView.dart';
+import 'package:execciseflutter/ui/HeroFirst.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -54,6 +55,14 @@ class MyApp extends StatelessWidget {
               InkWell(
                 child: Text("Cachenetwork image"),
                 onTap: () => Get.to(CacheNetworkImageView()),
+              ),
+
+              SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                child: Text("Animation"),
+                onTap: () => Get.to(HeroFirst()),
               ),
             ],
           ),
