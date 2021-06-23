@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:execciseflutter/language/Messages.dart';
+import 'package:execciseflutter/ui/AnimationTest.dart';
 import 'package:execciseflutter/ui/BlurryContainerView.dart';
 import 'package:execciseflutter/ui/CacheNetworkImageView.dart';
 import 'package:execciseflutter/ui/EasyContainerView.dart';
@@ -63,6 +64,14 @@ class MyApp extends StatelessWidget {
               InkWell(
                 child: Text("Animation"),
                 onTap: () => Get.to(HeroFirst()),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                child: Text("Spacer"),
+                onTap: () => Get.to(SpacerTest()
+                ),
               ),
             ],
           ),
