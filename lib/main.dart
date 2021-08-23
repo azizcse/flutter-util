@@ -1,6 +1,8 @@
 import 'dart:io';
 
 import 'package:execciseflutter/language/Messages.dart';
+import 'package:execciseflutter/them/ThemService.dart';
+import 'package:execciseflutter/them/Thems.dart';
 import 'package:execciseflutter/ui/AnimationTest.dart';
 import 'package:execciseflutter/ui/BlurryContainerView.dart';
 import 'package:execciseflutter/ui/CacheNetworkImageView.dart';
@@ -14,14 +16,18 @@ import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
 
 void main() {
-  runApp(GetMaterialApp(
-    debugShowCheckedModeBanner: false,
-    theme: ThemeData.light(),
-    translations: Messages(),
-    locale: Locale('en', 'US'),
-    fallbackLocale: Locale('en', 'UK'),
-    home: MyApp(),
-  ));
+  runApp(
+    GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: Themes.light,
+      darkTheme: Themes.dark,
+      themeMode: ThemeService().theme,
+      translations: Messages(),
+      locale: Locale('en', 'US'),
+      fallbackLocale: Locale('en', 'UK'),
+      home: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -30,7 +36,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: Container(
-        color: Colors.white,
         width: MediaQuery.of(context).size.width * 0.75,
         height: MediaQuery.of(context).size.height,
         child: Center(
@@ -57,7 +62,6 @@ class MyApp extends StatelessWidget {
                 child: Text("Cachenetwork image"),
                 onTap: () => Get.to(CacheNetworkImageView()),
               ),
-
               SizedBox(
                 height: 20,
               ),
@@ -70,8 +74,14 @@ class MyApp extends StatelessWidget {
               ),
               InkWell(
                 child: Text("Spacer"),
-                onTap: () => Get.to(SpacerTest()
-                ),
+                onTap: () => Get.to(SpacerTest()),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                child: Text("Them change"),
+                onTap: () => ThemeService().switchTheme(),
               ),
             ],
           ),
