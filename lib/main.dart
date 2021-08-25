@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:execciseflutter/language/LocalizationService.dart';
 import 'package:execciseflutter/language/Messages.dart';
 import 'package:execciseflutter/them/ThemService.dart';
 import 'package:execciseflutter/them/Thems.dart';
@@ -24,9 +25,9 @@ void main() async {
       theme: Themes.light,
       darkTheme: Themes.dark,
       themeMode: ThemeService().theme,
-      translations: Messages(),
-      locale: Locale('en', 'US'),
-      fallbackLocale: Locale('en', 'UK'),
+      locale: LocalizationService.locale,
+      fallbackLocale: LocalizationService.fallbackLocale,
+      translations: LocalizationService(),
       home: MyApp(),
     ),
   );
@@ -86,6 +87,14 @@ class MyApp extends StatelessWidget {
                 child: Text("Them change"),
                 onTap: () => ThemeService().switchTheme(),
               ),
+
+              SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                child: Text("Language change"),
+                onTap: () => LocalizationService().changeLocale("Turkey"),
+              ),
             ],
           ),
         ),
@@ -93,7 +102,7 @@ class MyApp extends StatelessWidget {
       appBar: AppBar(
         title: Text("Example"),
       ),
-      body: MyHomePage(title: 'Flutter Demo Home Page'),
+      body: MyHomePage(title: 'hello'.tr),
     );
   }
 }

@@ -15,7 +15,7 @@ class LocalizationService extends Translations {
   // Needs to be same order with locales
   static final langs = [
     'English',
-    'Türkçe',
+    'Turkey',
     '日本語',
   ];
 
@@ -31,10 +31,19 @@ class LocalizationService extends Translations {
   // Translations are separated maps in `lang` file
   @override
   Map<String, Map<String, String>> get keys => {
-    'en_US': enUS, // lang/en_us.dart
-    'tr_TR': enUS, // lang/tr_tr.dart
-    'ja_JP': enUS, // lang/ja_jp.dart
-  };
+        'en_US': {
+          'hello': "Hello word english",
+          'home': 'Home english'
+        }, // lang/en_us.dart
+        'tr_TR': {
+          'hello': "Hello word turkey",
+          'home': 'Home turkey'
+        }, // lang/tr_tr.dart
+        'ja_JP': {
+          'hello': "Hello word japans",
+          'home': 'Home japans'
+        }, // lang/ja_jp.dart
+      };
 
   // Gets locale from language, and updates the locale
   void changeLocale(String lang) {
@@ -47,6 +56,6 @@ class LocalizationService extends Translations {
     for (int i = 0; i < langs.length; i++) {
       if (lang == langs[i]) return locales[i];
     }
-    return Get.locale!!;
+    return Get.locale!;
   }
 }
