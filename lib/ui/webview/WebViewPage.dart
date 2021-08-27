@@ -33,7 +33,7 @@ class _WebViewPageState extends State<WebViewPage> {
         width: Get.width,
         height: Get.height*0.75,
         child: WebView(
-          initialUrl: 'https://sika-americas.wistia.com/medias/f3q8uacexo',
+          initialUrl: 'https://fast.wistia.net/embed/iframe/f3q8uacexo',
           javascriptMode: JavascriptMode.unrestricted,
           onWebViewCreated: (WebViewController webViewController) {},
           onProgress: (int progress) {
