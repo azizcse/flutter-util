@@ -34,6 +34,8 @@ dependencies:
   easy_container: ^0.0.8
   cached_network_image: ^3.0.0
   get_storage: ^2.0.3
+  webview_flutter: ^2.0.12
+  video_player: ^2.1.14
 
 
 dev_dependencies:

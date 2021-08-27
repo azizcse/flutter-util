@@ -9,6 +9,7 @@ import 'package:execciseflutter/ui/BlurryContainerView.dart';
 import 'package:execciseflutter/ui/CacheNetworkImageView.dart';
 import 'package:execciseflutter/ui/EasyContainerView.dart';
 import 'package:execciseflutter/ui/HeroFirst.dart';
+import 'package:execciseflutter/ui/webview/WebViewPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -94,6 +95,14 @@ class MyApp extends StatelessWidget {
               InkWell(
                 child: Text("Language change"),
                 onTap: () => LocalizationService().changeLocale("Turkey"),
+              ),
+
+              SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                child: Text("Play video"),
+                onTap: () => Get.to(WebViewPage()),
               ),
             ],
           ),
