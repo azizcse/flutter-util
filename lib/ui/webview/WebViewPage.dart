@@ -31,7 +31,7 @@ class _WebViewPageState extends State<WebViewPage> {
       ),
       body: Container(
         width: Get.width,
-        height: Get.height*0.75,
+        height: Get.height*0.50,
         child: WebView(
           initialUrl: 'https://fast.wistia.net/embed/iframe/f3q8uacexo',
           javascriptMode: JavascriptMode.unrestricted,
