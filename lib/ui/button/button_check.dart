@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_switch/flutter_switch.dart';
 
-class ButtonView extends StatelessWidget {
-  const ButtonView({Key? key}) : super(key: key);
+class ButtonView extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return _ButtonView();
+  }
+}
+
+class _ButtonView extends State<ButtonView> {
+  bool isActive = false;
 
   @override
   Widget build(BuildContext context) {
@@ -92,6 +100,22 @@ class ButtonView extends StatelessWidget {
                 ),
                 onPressed: () {},
                 child: Text('TextButton with custom overlay colors'),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              FlutterSwitch(
+                value: isActive,
+                showOnOff: true,
+                activeColor: Colors.amber,
+                activeToggleColor: Colors.red,
+                onToggle: (value) {
+                  setState(() {
+                    isActive = value;
+                  });
+                },
+                activeText: "Yes",
+                inactiveText: "No",
               )
             ],
           ),
