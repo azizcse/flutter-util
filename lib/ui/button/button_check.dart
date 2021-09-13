@@ -27,10 +27,8 @@ class _ButtonView extends State<ButtonView> {
                     onSurface: Colors.grey,
                     elevation: 3,
                     side: BorderSide(color: Colors.black, width: 2),
-                    shape: const BeveledRectangleBorder(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(5),
-                      ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
                     ),
                     shadowColor: Colors.red),
                 onPressed: () {
