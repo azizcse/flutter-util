@@ -15,11 +15,30 @@ class _SpanAbleTextState extends State<SpanAbleText> {
       child: Center(
         child: RichText(
           text: TextSpan(
-            text: 'Hello ',
-            style: DefaultTextStyle.of(context).style,
-            children: const <TextSpan>[
-              TextSpan(text: 'bold', style: TextStyle(fontWeight: FontWeight.bold)),
-              TextSpan(text: ' world!'),
+            children: [
+              TextSpan(
+                text: 'Single tap',
+                style: TextStyle(color: Colors.red[300]),
+                recognizer: TapGestureRecognizer()
+                  ..onTap = () {
+                    print("Single press");
+                  },
+              ),
+              TextSpan(
+                  text: ' Double tap',
+                  style: TextStyle(color: Colors.green[300]),
+                  recognizer: DoubleTapGestureRecognizer()
+                    ..onDoubleTap = () {
+                      print("Double press");
+                    }),
+              TextSpan(
+                text: ' Long press',
+                style: TextStyle(color: Colors.blue[300]),
+                recognizer: LongPressGestureRecognizer()
+                  ..onLongPress = () {
+                    print("Long press");
+                  },
+              ),
             ],
           ),
         ),

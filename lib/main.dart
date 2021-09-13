@@ -10,6 +10,7 @@ import 'package:execciseflutter/ui/CacheNetworkImageView.dart';
 import 'package:execciseflutter/ui/EasyContainerView.dart';
 import 'package:execciseflutter/ui/HeroFirst.dart';
 import 'package:execciseflutter/ui/button/button_check.dart';
+import 'package:execciseflutter/ui/spantext/SpanAbleText.dart';
 import 'package:execciseflutter/ui/webview/WebViewPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
@@ -112,6 +113,14 @@ class MyApp extends StatelessWidget {
                 child: Text("Button check"),
                 onTap: () => Get.to(ButtonView()),
               ),
+              SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                child: Text("Spanable Text"),
+                onTap: () => Get.to(SpanAbleText()),
+              ),
+
             ],
           ),
         ),
