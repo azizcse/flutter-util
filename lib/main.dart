@@ -9,6 +9,7 @@ import 'package:execciseflutter/ui/BlurryContainerView.dart';
 import 'package:execciseflutter/ui/CacheNetworkImageView.dart';
 import 'package:execciseflutter/ui/EasyContainerView.dart';
 import 'package:execciseflutter/ui/HeroFirst.dart';
+import 'package:execciseflutter/ui/appbar/SliverAppBar.dart';
 import 'package:execciseflutter/ui/button/button_check.dart';
 import 'package:execciseflutter/ui/spantext/SpanAbleText.dart';
 import 'package:execciseflutter/ui/webview/WebViewPage.dart';
@@ -121,6 +122,13 @@ class MyApp extends StatelessWidget {
                 onTap: () => Get.to(SpanAbleText()),
               ),
 
+              SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                child: Text("Sliver tab"),
+                onTap: () => Get.to(SliverAppBarPage()),
+              ),
             ],
           ),
         ),
