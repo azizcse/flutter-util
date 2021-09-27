@@ -11,6 +11,7 @@ import 'package:execciseflutter/ui/EasyContainerView.dart';
 import 'package:execciseflutter/ui/HeroFirst.dart';
 import 'package:execciseflutter/ui/appbar/SliverAppBar.dart';
 import 'package:execciseflutter/ui/button/button_check.dart';
+import 'package:execciseflutter/ui/media/GalleryPage.dart';
 import 'package:execciseflutter/ui/spantext/SpanAbleText.dart';
 import 'package:execciseflutter/ui/webview/WebViewPage.dart';
 import 'package:flutter/cupertino.dart';
@@ -91,7 +92,6 @@ class MyApp extends StatelessWidget {
                 child: Text("Them change"),
                 onTap: () => ThemeService().switchTheme(),
               ),
-
               SizedBox(
                 height: 20,
               ),
@@ -99,7 +99,6 @@ class MyApp extends StatelessWidget {
                 child: Text("Language change"),
                 onTap: () => LocalizationService().changeLocale("Turkey"),
               ),
-
               SizedBox(
                 height: 20,
               ),
@@ -121,13 +120,19 @@ class MyApp extends StatelessWidget {
                 child: Text("Spanable Text"),
                 onTap: () => Get.to(SpanAbleText()),
               ),
-
               SizedBox(
                 height: 20,
               ),
               InkWell(
                 child: Text("Sliver tab"),
                 onTap: () => Get.to(SliverAppBarPage()),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                child: Text("Gallery image"),
+                onTap: () => Get.to(GalleryPage()),
               ),
             ],
           ),
