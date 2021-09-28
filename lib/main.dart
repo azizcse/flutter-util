@@ -13,6 +13,7 @@ import 'package:execciseflutter/ui/appbar/SliverAppBar.dart';
 import 'package:execciseflutter/ui/button/button_check.dart';
 import 'package:execciseflutter/ui/media/GalleryPage.dart';
 import 'package:execciseflutter/ui/spantext/SpanAbleText.dart';
+import 'package:execciseflutter/ui/textanim/TextAnim.dart';
 import 'package:execciseflutter/ui/webview/WebViewPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
@@ -133,6 +134,13 @@ class MyApp extends StatelessWidget {
               InkWell(
                 child: Text("Gallery image"),
                 onTap: () => Get.to(GalleryPage()),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                child: Text("TextAnim"),
+                onTap: () => Get.to(TextAnim()),
               ),
             ],
           ),
