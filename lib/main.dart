@@ -23,6 +23,8 @@ import 'package:get_storage/get_storage.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
 
+import 'ui/editir/RichEditor.dart';
+
 void main() async {
   await GetStorage.init();
   runApp(
@@ -142,6 +144,14 @@ class MyApp extends StatelessWidget {
                 child: Text("TextAnim"),
                 onTap: () => Get.to(TextAnim()),
               ),
+              SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                child: Text("Editor"),
+                onTap: () => Get.to(RichTextEditors()),
+              ),
+
             ],
           ),
         ),

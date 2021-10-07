@@ -21,8 +21,7 @@ class BlurryContainerView extends StatelessWidget {
                 decoration: new BoxDecoration(
                     color: Colors.grey.shade200.withOpacity(0.5)),
                 child: new Center(
-                  child: new Text('Frosted',
-                      style: Theme.of(context).textTheme.display3),
+                  child: new Text('Frosted'),
                 ),
               ),
             ),
