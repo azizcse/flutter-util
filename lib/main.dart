@@ -11,6 +11,8 @@ import 'package:execciseflutter/ui/EasyContainerView.dart';
 import 'package:execciseflutter/ui/HeroFirst.dart';
 import 'package:execciseflutter/ui/appbar/SliverAppBar.dart';
 import 'package:execciseflutter/ui/button/button_check.dart';
+import 'package:execciseflutter/ui/chat/ChatView.dart';
+import 'package:execciseflutter/ui/icontest/icon_test.dart';
 import 'package:execciseflutter/ui/media/GalleryPage.dart';
 import 'package:execciseflutter/ui/spantext/SpanAbleText.dart';
 import 'package:execciseflutter/ui/textanim/TextAnim.dart';
@@ -140,7 +142,7 @@ class MyApp extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              InkWell(
+              /*InkWell(
                 child: Text("TextAnim"),
                 onTap: () => Get.to(TextAnim()),
               ),
@@ -151,7 +153,20 @@ class MyApp extends StatelessWidget {
                 child: Text("Editor"),
                 onTap: () => Get.to(RichTextEditors()),
               ),
-
+              SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                child: Text("Icon test"),
+                onTap: () => Get.to(IconTestPage()),
+              ),*/
+              SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                child: Text("Chat page"),
+                onTap: () => Get.to(ChatView()),
+              ),
             ],
           ),
         ),

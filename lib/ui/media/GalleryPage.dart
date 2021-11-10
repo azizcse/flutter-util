@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:permission_handler/permission_handler.dart';
 import 'package:photo_gallery/photo_gallery.dart';
 import 'package:photo_manager/photo_manager.dart';
 
@@ -18,7 +17,7 @@ class _GalleryPageState extends State<GalleryPage> {
   }
 
   void _askPermission() async {
-    if (await Permission.storage.request().isGranted) {
+    /*if (await Permission.storage.request().isGranted) {
       List<AssetPathEntity> list = await PhotoManager.getAssetPathList();
       list.forEach((element) async {
         var assetList = await element.assetList;
@@ -26,7 +25,7 @@ class _GalleryPageState extends State<GalleryPage> {
           File? file = await item.file;
           print("File path ${file!.path}");
         });
-      });
+      });*/
 
       /*final List<Album> imageAlbums = await PhotoGallery.listAlbums(
         mediumType: MediumType.image
@@ -43,7 +42,7 @@ class _GalleryPageState extends State<GalleryPage> {
           print("File path ${path.absolute.path}");
         });
       });*/
-    }
+
   }
 
   @override

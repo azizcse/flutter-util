@@ -16,11 +16,13 @@ class HeroSecond extends StatelessWidget {
               size: 200,
             ),
             transitionOnUserGestures: true,
-            flightShuttleBuilder: (flightContext, animation, direction,
-                fromContext, toContext) {
-              return Icon(Icons.send, size: 150.0,);
+            flightShuttleBuilder:
+                (flightContext, animation, direction, fromContext, toContext) {
+              return Icon(
+                Icons.send,
+                size: 150.0,
+              );
             },
-
           ),
         ),
       ),
