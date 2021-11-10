@@ -4,14 +4,14 @@ import 'package:get/get.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
-class ChatView extends StatefulWidget {
+/*class ChatView extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     return _ChatView();
   }
-}
+}*/
 
-class _ChatView extends State<ChatView> {
+class ChatView extends StatelessWidget {
   final europeanCountries = [
     'Albania',
     'Andorra',
@@ -71,14 +71,14 @@ class _ChatView extends State<ChatView> {
   final ItemPositionsListener itemPositionsListener =
       ItemPositionsListener.create();
 
-  @override
+  /*@override
   void initState() {
     super.initState();
     controller = AutoScrollController(
         viewportBoundaryGetter: () =>
             Rect.fromLTRB(0, 0, 0, MediaQuery.of(context).padding.bottom),
         axis: Axis.vertical);
-  }
+  }*/
 
   var index = 0;
 
