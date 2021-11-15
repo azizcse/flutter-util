@@ -65,7 +65,6 @@ class ChatView extends StatelessWidget {
     'United Kingdom',
     'Vatican City'
   ];
-  late AutoScrollController controller;
 
   final ItemScrollController itemScrollController = ItemScrollController();
   final ItemPositionsListener itemPositionsListener =
@@ -91,74 +90,72 @@ class ChatView extends StatelessWidget {
         ),
       ),
       body: Container(
-        child: Column(
-          children: [
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  ElevatedButton(
-                    onPressed: () {
-                      controller.scrollToIndex(10,
-                          preferPosition: AutoScrollPosition.begin);
-                    },
-                    child: Text("Go to 10"),
-                  ),
-                  SizedBox(
-                    width: 5.0,
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      /*controller.scrollToIndex(20,
-                          preferPosition: AutoScrollPosition.begin);*/
-                      itemScrollController.scrollTo(
-                          index: 30,
-                          duration: Duration(seconds: 2),
-                          curve: Curves.easeInOutCubic);
-                    },
-                    child: Text("Go to 20"),
-                  ),
-                  SizedBox(
-                    width: 5.0,
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      controller.scrollToIndex(40,
-                          preferPosition: AutoScrollPosition.begin);
-                    },
-                    child: Text("Go to 40"),
-                  ),
-                ],
-              ),
-            ),
-            Expanded(
-              child: ScrollablePositionedList.builder(
-                itemCount: europeanCountries.length,
-                itemBuilder: (context, index) {
-                  if (index % 2 == 0) {
-                    return Text('Item $index');
-                  } else {
-                    return Container(
-                      width: Get.width,
-                      height: 200,
-                      child: Center(
-                        child: Text("Here $index"),
-                      ),
-                    );
-                  }
-                },
-                itemScrollController: itemScrollController,
-                itemPositionsListener: itemPositionsListener,
-              ),
-            )
-          ],
+        child: ScrollablePositionedList.builder(
+          itemCount: europeanCountries.length,
+          itemBuilder: (context, index) {
+            if(index == 0){
+              return  SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        itemScrollController.scrollTo(
+                            index: 10,
+                            duration: Duration(seconds: 2),
+                            curve: Curves.easeInOutCubic);
+                      },
+                      child: Text("Go to 10"),
+                    ),
+                    SizedBox(
+                      width: 5.0,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        itemScrollController.scrollTo(
+                            index: 30,
+                            duration: Duration(seconds: 2),
+                            curve: Curves.easeInOutCubic);
+                      },
+                      child: Text("Go to 20"),
+                    ),
+                    SizedBox(
+                      width: 5.0,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        itemScrollController.scrollTo(
+                            index: 40,
+                            duration: Duration(seconds: 2),
+                            curve: Curves.easeInOutCubic);
+                      },
+                      child: Text("Go to 40"),
+                    ),
+                  ],
+                ),
+              );
+            }
+            if (index % 2 == 0) {
+              return Text('Item $index');
+            } else {
+              return Container(
+                width: Get.width,
+                height: 200,
+                child: Center(
+                  child: Text("Here $index"),
+                ),
+              );
+            }
+          },
+          itemScrollController: itemScrollController,
+          itemPositionsListener: itemPositionsListener,
         ),
       ),
     );
   }
 
-  List<Widget> _getItemList() {
+ /* List<Widget> _getItemList() {
     List<Widget> itemList = [];
     europeanCountries.asMap().forEach((index, item) {
       if (index % 2 == 0) {
@@ -190,5 +187,5 @@ class ChatView extends StatelessWidget {
       }
     });
     return itemList;
-  }
+  }*/
 }
