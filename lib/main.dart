@@ -26,6 +26,7 @@ import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
 
 import 'ui/editir/RichEditor.dart';
+import 'ui/text/TextDecoration.dart';
 
 void main() async {
   await GetStorage.init();
@@ -160,12 +161,10 @@ class MyApp extends StatelessWidget {
                 child: Text("Icon test"),
                 onTap: () => Get.to(IconTestPage()),
               ),*/
-              SizedBox(
-                height: 20,
-              ),
+
               InkWell(
-                child: Text("Chat page"),
-                onTap: () => Get.to(ChatView()),
+                child: Text("Icon test"),
+                onTap: () => Get.to(TextLengthCheck()),
               ),
             ],
           ),
