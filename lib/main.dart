@@ -12,6 +12,7 @@ import 'package:execciseflutter/ui/HeroFirst.dart';
 import 'package:execciseflutter/ui/appbar/SliverAppBar.dart';
 import 'package:execciseflutter/ui/button/button_check.dart';
 import 'package:execciseflutter/ui/chat/ChatView.dart';
+import 'package:execciseflutter/ui/dropdown/searchable_dropdown.dart';
 import 'package:execciseflutter/ui/icontest/icon_test.dart';
 import 'package:execciseflutter/ui/media/GalleryPage.dart';
 import 'package:execciseflutter/ui/spantext/SpanAbleText.dart';
@@ -162,10 +163,15 @@ class MyApp extends StatelessWidget {
                 onTap: () => Get.to(IconTestPage()),
               ),*/
 
-              InkWell(
+              /*InkWell(
                 child: Text("Icon test"),
                 onTap: () => Get.to(TextLengthCheck()),
+              ),*/
+              InkWell(
+                child: Text("Dropdown"),
+                onTap: () => Get.to(SearchableDropdown()),
               ),
+
             ],
           ),
         ),
