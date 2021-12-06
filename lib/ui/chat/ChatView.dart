@@ -132,6 +132,71 @@ class ChatView extends StatelessWidget {
                       },
                       child: Text("Go to 40"),
                     ),
+
+                    SizedBox(
+                      width: 5.0,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        itemScrollController.scrollTo(
+                            index: 40,
+                            duration: Duration(seconds: 2),
+                            curve: Curves.easeInOutCubic);
+                      },
+                      child: Text("Go to 40"),
+                    ),
+
+                    SizedBox(
+                      width: 5.0,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        itemScrollController.scrollTo(
+                            index: 40,
+                            duration: Duration(seconds: 2),
+                            curve: Curves.easeInOutCubic);
+                      },
+                      child: Text("Go to 40"),
+                    ),
+
+                    SizedBox(
+                      width: 5.0,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        itemScrollController.scrollTo(
+                            index: 40,
+                            duration: Duration(seconds: 2),
+                            curve: Curves.easeInOutCubic);
+                      },
+                      child: Text("Go to 40"),
+                    ),
+
+                    SizedBox(
+                      width: 5.0,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        itemScrollController.scrollTo(
+                            index: 40,
+                            duration: Duration(seconds: 2),
+                            curve: Curves.easeInOutCubic);
+                      },
+                      child: Text("Go to 40"),
+                    ),
+
+                    SizedBox(
+                      width: 5.0,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        itemScrollController.scrollTo(
+                            index: 40,
+                            duration: Duration(seconds: 2),
+                            curve: Curves.easeInOutCubic);
+                      },
+                      child: Text("Go to 40"),
+                    ),
                   ],
                 ),
               );

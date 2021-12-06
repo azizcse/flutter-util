@@ -139,7 +139,7 @@ class MyApp extends StatelessWidget {
               ),
               InkWell(
                 child: Text("Gallery image"),
-                onTap: () => Get.to(GalleryPage()),
+                onTap: () => Get.to(ChatView()),
               ),
               SizedBox(
                 height: 20,
