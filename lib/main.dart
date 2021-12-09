@@ -15,6 +15,7 @@ import 'package:execciseflutter/ui/chat/ChatView.dart';
 import 'package:execciseflutter/ui/dropdown/searchable_dropdown.dart';
 import 'package:execciseflutter/ui/icontest/icon_test.dart';
 import 'package:execciseflutter/ui/media/GalleryPage.dart';
+import 'package:execciseflutter/ui/sliver/sliver_appbar_check.dart';
 import 'package:execciseflutter/ui/spantext/SpanAbleText.dart';
 import 'package:execciseflutter/ui/textanim/TextAnim.dart';
 import 'package:execciseflutter/ui/webview/WebViewPage.dart';
@@ -138,8 +139,8 @@ class MyApp extends StatelessWidget {
                 height: 20,
               ),
               InkWell(
-                child: Text("Gallery image"),
-                onTap: () => Get.to(ChatView()),
+                child: Text("Sliver appbar"),
+                onTap: () => Get.to(SliverAppbarCheck()),
               ),
               SizedBox(
                 height: 20,
